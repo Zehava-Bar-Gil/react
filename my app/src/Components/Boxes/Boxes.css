@@ -1,0 +1,35 @@
+.Boxes{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Box1{
+    background-color:green;
+    width: 500px;
+    height: 500px;
+}
+
+.Box2{
+    background-color:blue;
+    width: 400px;
+    height: 400px;
+    
+}
+
+.Box3{
+    background-color:pink;
+    width: 300px;
+    height: 300px;
+    
+}
+
+.Box4{
+    margin-top: 65px;
+    margin-left: 45px;
+    background-color:purple;
+    width: 200px;
+    height: 50px;
+    
+    
+}

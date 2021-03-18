@@ -1,0 +1,13 @@
+.buttons {
+    width: 250px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.bold{
+    font-weight: bold;
+}

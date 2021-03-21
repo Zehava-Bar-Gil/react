@@ -6,6 +6,10 @@ import Quiz1 from './Components/Quiz/Quiz'
 import Buttons from './Components/Buttons/Btn'
 import Card from './Components/Card/Cards'
 import ClassCard from './Components/6.1 ClassComponents/Cards'
+import Increment from './Components/7.1 Increment/Increment'
+import Hide_Seek from './Components/7.2 Hide_Seek/Hide_Seek'
+import LifeCycleMethods from './Components/8.1 LifeCycleMethods/LifeCycleMethods'
+import BoxAnimation from './Components/8.2 BoxAnimation/BoxAnimation'
 
 function App() {
   return (
@@ -27,6 +31,10 @@ function App() {
       <Buttons name="Not Important"/>
       <Card/>
       <ClassCard/>
+      <Increment/>
+      <Hide_Seek/>
+      <LifeCycleMethods/>
+      <BoxAnimation/>
       
     </div>
   );

@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes mymove {
+    from {left: -100px;}
+    to {left: 0px;}
+}
+
+.style {
+    width: 100px;
+    height: 100px;
+    background:#f3e42c;
+    animation: all.5s infinite;
+}
+
+
+

@@ -1,0 +1,15 @@
+.yellowBox{
+    margin: 10px;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    background-color:#f1ee1e;
+}
+
+.container{
+    margin: 10px;
+    padding: 10px;
+    width: 140px;
+    height: 160px; 
+    border: 3px solid #333;
+}

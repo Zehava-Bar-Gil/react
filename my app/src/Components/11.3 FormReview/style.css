@@ -1,0 +1,16 @@
+.input{
+    padding: 18px;
+}
+
+.form{
+    margin: 18px;
+    display:flex;
+    flex-direction: column;
+}
+
+.submit{
+    border-radius: 10px;
+    width: 70px;
+    position: center;
+    margin:auto;
+}

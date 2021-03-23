@@ -1,24 +1,25 @@
 .Boxes{
+    margin: auto;
     display:flex;
     justify-content: center;
     align-items: center;
 }
 
 .Box1{
-    background-color:green;
+    background-color:#c3f1a3;
     width: 500px;
     height: 500px;
 }
 
 .Box2{
-    background-color:blue;
+    background-color:#85bbe8;
     width: 400px;
     height: 400px;
     
 }
 
 .Box3{
-    background-color:pink;
+    background-color:#f1acbe;
     width: 300px;
     height: 300px;
     
@@ -27,7 +28,7 @@
 .Box4{
     margin-top: 65px;
     margin-left: 45px;
-    background-color:purple;
+    background-color:#ea97df;
     width: 200px;
     height: 50px;   
 }

@@ -13,6 +13,9 @@ import BoxAnimation from './Components/8.2 BoxAnimation/BoxAnimation'
 import ChildToParent from './Components/11.1 ChildToParent/ChildToParent'
 import Checkboxes from './Components/11.2 Checkbox/Checkboxes'
 import ChuckNoriss from './Components/12.1 ChuckNoriss/ChuckNoriss'
+import FormReview from './Components/11.3 FormReview/FormReview'
+import Data_Massage from './Components/13.1 DataMassaging/Data_Massage'
+
 
 function App() {
   return (
@@ -29,18 +32,32 @@ function App() {
    
       <First/>
       <Box1/>
+      <hr />
       <Quiz1/>
+      <hr />
       <Buttons name="Important"/>
       <Buttons name="Not Important"/>
+      <hr />
       <Card/>
       <ClassCard/>
+      <hr />
       <Increment/>
+      
       <Hide_Seek/>
+      
       <LifeCycleMethods/>
+      
       <BoxAnimation/>
+      <hr />
       <ChildToParent/>
+      <hr />
       <Checkboxes/>
+      <hr />
+      <FormReview/>
+      <hr />
       <ChuckNoriss/>
+      <hr />
+      <Data_Massage/>
       
     </div>
   );

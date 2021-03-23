@@ -1,0 +1,18 @@
+.Data .cards{ 
+    padding: 15px;
+    margin: 10px auto 10px auto;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, 
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;  
+}
+
+.Data{
+    padding: 15px;
+    margin: auto;
+}
+
+.names{
+    padding: 15px;
+    align-items: center;
+    text-align: center;
+}
+

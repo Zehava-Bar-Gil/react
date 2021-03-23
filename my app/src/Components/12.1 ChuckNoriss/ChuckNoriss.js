@@ -1,75 +1,59 @@
 import React, { Component } from 'react';
-import Select from 'react-select';
 import axios from 'axios';
 
 class ChuckNoriss extends Component {
-    state = {
-        joke: null,
-        jokeByCategory: null,
-        pickOption: null,
-        categories: []
+state = {
+    joke:'',
+    term:'random',
+    Categoris:[]
+}
+
+async componentDidMount(){
+  let category = await axios.get('https://api.chucknorris.io/jokes/categories')
+
+  this.setState({Categoris:category.data})    
+}
+
+
+GetJokeHandler = async() =>{
+
+  let response; 
+    if(this.state.term === 'random'){
+        response =  await axios.get('https://api.chucknorris.io/jokes/random',{})
+    }else{
+        response = await axios.get(`https://api.chucknorris.io/jokes/random?category=${this.state.term}`,{})
     }
 
+    this.setState({
+        joke:response.data.value
+    })
+    
+}
 
-async componentDidMount() {
-    try {
-        const response = await axios.get('https://api.chucknorris.io/jokes/categories');
-            
-        this.setState({
-            categories: response.data.map(category => 
-            ({ value: category, label: category })),
-            pickOption: response.data[0]
-        });
-        } 
-        catch (err) {
-        console.err(err);
-        }
-    }
+CategoryHandler = (p) =>{
+    this.setState({
+        term:p.target.value
+    })
+}
 
-    async onBtnClick() {
-        try {
-            const response = await axios.get('https://api.chucknorris.io/jokes/random');
-            this.setState({ joke: response.data.value });
-        } catch (err) {
-            console.err(err);
-        }
-    }
+render() {
+    return (
+        <div>
+            <button onClick = {this.GetJokeHandler}>Get a random joke</button>
+               <select name="" id="" onChange={this.CategoryHandler}>
+                    <option value="random">random</option>
+                    {
+                        this.state.Categoris.map(p =>{
+                            return <option value={p} key={p}>{p}</option>
+                        })
+                    }  
+              </select>
+               <p>{this.state.joke}</p>
+       </div>
+     );
 
-    onSelectChange = async pickOption => {
-        try {
-            const response = await axios.get(`https://api.chucknorris.io/jokes/random?category=${selectedOption.value}`);
-            
-            this.setState({
-                jokeByCategory: response.data.value,
-               pickOption: pickOption,
-            });
-        } catch (err) {
-            console.err(err);
-        }
-    };
-
-    render() {
-        return (
-            <div>
-                <button
-                    onClick={() => this.onBtnClick()}
-                >
-                    Get a random joke
-                </button>
-                <div>
-                    {this.state.joke}
-                </div>
-                <Select 
-                    value={this.state.pickOption} 
-                    onChange={this.onPickChange}
-                    options={this.state.categories}
-                />
-                <div>
-                    {this.state.jokeByCategory}
-                </div>
-            </div>
-        );
-    }
+  } 
 }
 
 export default ChuckNoriss;
+

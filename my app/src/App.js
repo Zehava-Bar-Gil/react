@@ -15,6 +15,7 @@ import Checkboxes from './Components/11.2 Checkbox/Checkboxes'
 import ChuckNoriss from './Components/12.1 ChuckNoriss/ChuckNoriss'
 import FormReview from './Components/11.3 FormReview/FormReview'
 import Data_Massage from './Components/13.1 DataMassaging/Data_Massage'
+import AvatarsHooks from './Components/13.2 Avatars/AvatarsHooks'
 
 
 function App() {
@@ -54,10 +55,12 @@ function App() {
       <Checkboxes/>
       <hr />
       <FormReview/>
-      <hr />
+     
       <ChuckNoriss/>
       <hr />
       <Data_Massage/>
+      <hr />
+      <AvatarsHooks/>
       
     </div>
   );

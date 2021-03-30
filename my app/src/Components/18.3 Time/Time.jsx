@@ -1,79 +1,51 @@
-import React, { Component } from "react";
-import 'style.css'
+import React, { useState } from "react";
+import './style.css'
 
-class Time extends Component {
-  constructor(props) {
-    super(props);
-    this.countDownId = null;
-    this.state = {
-      hours: 0,
-      minutes: 0,
-      seconds: 0,
-      expired: false
-    };
+export default function Time() {
+
+  const time = {
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
   }
 
-  componentDidMount() {
-    this.countDownId = setInterval(this.timerInit, 1000);
-  }
+  const [timeStatus, setTimeStatus] = useState(time);
 
-  componentWillUnmount() {
-    if (this.countDownId) {
-      clearInterval(this.countDownId);
-    }
-  }
-
-  timerInit = () => {
-    const { startDate } = this.props;
-    console.log(startDate);
-    const now = new Date().getTime();
-    if (!startDate) {
-      this.setState({ expired: true });
-      return;
-    }
-    const countDownStartDate = new Date(startDate).getTime();
-    const distance = countDownStartDate - now;
-    const hours = Math.floor(
-      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-   
-    if (distance < 0) {
-      clearInterval(this.countDownId);
-      this.setState({
-        hours: 0,
-        minutes: 0,
-        seconds: 0,
-        expired: true
-      });
-      return;
-    }
-    this.setState({ hours, minutes, seconds, expired: false });
+  const hourHandler = (e) => {
+    setTimeStatus({
+      hours: e,
+      minutes: e * 60,
+      seconds: e * 60 * 60
+    })
   };
 
-  render() {
-    const { hours, minutes, seconds, expired } = this.state;
-    if (expired) {
-      return <div className="expired">Expired :(</div>;
-    }
-    return (
-      <div className="timer">
-        <div>
-          {hours}
-          <span>h</span>
-        </div>
-        <div>
-          {minutes}
-          <span>m</span>
-        </div>
-        <div>
-          {seconds}
-          <span>s</span>
-        </div>
-      </div>
-    );
-  }
+  const minutsHandler = (e) => {
+    setTimeStatus({
+      hours: (e/60).toFixed(2),
+      minutes: e,
+      seconds: e * 60
+    })
+  };
+
+  const secondsHandler = (e) => {
+    setTimeStatus({
+      hours: (e /60 /60).toFixed(2),
+      minutes: (e /60).toFixed(2) ,
+      seconds: e
+    })
+  };
+
+  return (
+    <div className="Time">
+      <label htmlFor="hours">Hours</label>
+      <input type="number" min="0" id="hours" name="hours" value={timeStatus.hours}
+      onChange={(e)=> hourHandler(e.target.value)}></input>
+      <label htmlFor="minutes">Minutes</label>
+      <input type="number" min="0" id="minutes" name="minutes" value={timeStatus.minutes}
+      onChange={(e)=> minutsHandler(e.target.value)}></input>
+      <label htmlFor="seconds">Seconds</label>
+      <input type="number" min="0" id="seconds" name="seconds" value={timeStatus.seconds}
+      onChange={(e)=> secondsHandler(e.target.value)}></input>
+    </div>
+  )
 }
-export default Time;

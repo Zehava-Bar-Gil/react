@@ -1,9 +1,9 @@
-.timer {
+.Time {
     display: flex;
     font-size: 20px;
     justify-content: center;
   }
-  .timer > div {
+  .Time > div {
     padding: 10px;
     background: #444;
     color: #fff;
@@ -13,17 +13,12 @@
     display: flex;
     justify-content: center;
   }
-  .timer > div > span {
+  .Time > div > span {
     text-transform: uppercase;
     color: #999;
     font-size: 20px;
     display: flex;
     align-items: center;
   }
-  .expired {
-    font-size: 20px;
-    color: rgb(126, 49, 49);
-    border: 1px solid rgb(126, 49, 49);
-    padding: 20px;
-  }
+ 
   

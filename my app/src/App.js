@@ -16,6 +16,8 @@ import ChuckNoriss from './Components/12.1 ChuckNoriss/ChuckNoriss'
 import FormReview from './Components/11.3 FormReview/FormReview'
 import Data_Massage from './Components/13.1 DataMassaging/Data_Massage'
 import AvatarsHooks from './Components/13.2 Avatars/AvatarsHooks'
+// import Router from './Components/16.1 Router/ProductDetail'
+import ReadMore from './Components/18.1 Text/ReadMore.jsx'
 
 
 function App() {
@@ -61,6 +63,9 @@ function App() {
       <Data_Massage/>
       <hr />
       <AvatarsHooks/>
+      <hr />
+      {/* <Router/> */}
+      <ReadMore/>
       
     </div>
   );

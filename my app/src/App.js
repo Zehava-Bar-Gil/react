@@ -18,7 +18,9 @@ import Data_Massage from './Components/13.1 DataMassaging/Data_Massage'
 import AvatarsHooks from './Components/13.2 Avatars/AvatarsHooks'
 // import Router from './Components/16.1 Router/ProductDetail'
 import ReadMore from './Components/18.1 Text/ReadMore.jsx'
-
+import ToDo from './Components/18.2 ToDo/ToDo.jsx'
+// import Time from './Components/18.3 Time/Time.jsx'
+import Marking from './Components/18.4 Marking&Deleting/Marking.jsx'
 
 function App() {
   return (
@@ -66,6 +68,12 @@ function App() {
       <hr />
       {/* <Router/> */}
       <ReadMore/>
+      <hr />
+      <ToDo />
+      <hr />
+      {/* <Time /> */}
+      <hr />
+      <Marking />
       
     </div>
   );

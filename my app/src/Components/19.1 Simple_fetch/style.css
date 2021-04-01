@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "Cheeky Rabbit";
+    src: url('./Cheeky\ Rabbit.ttf')
+    }
+
+.Simple_fetch{ 
+    font-family: Cheeky Rabbit, serif;
+    font-size: 1.5em;
+    margin: auto;
+    padding: auto;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%);
+    color: #ffffff;
+   
+}

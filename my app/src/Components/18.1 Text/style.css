@@ -1,10 +1,11 @@
-/* .container{
-    top: 10%;
-    left: 23%;
-    width: 50%;
-  } */
-    
+@font-face {
+    font-family: "Hello";
+    src: url('./Hello.ttf')
+    }
+
   .text{
+    font-family: Hello, serif; 
+    font-size: 1em; 
     display: inline;
     width: 100%;
   }

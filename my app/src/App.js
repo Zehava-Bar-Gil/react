@@ -21,6 +21,9 @@ import ReadMore from './Components/18.1 Text/ReadMore.jsx'
 import ToDo from './Components/18.2 ToDo/ToDo.jsx'
 import Time from './Components/18.3 Time/Time.jsx'
 import Marking from './Components/18.4 Marking&Deleting/Marking.jsx'
+import Simple_fetch from './Components/19.1 Simple_fetch/Simple_fetch.jsx'
+// import Countries from './Components/19.2 Countries/Countries.jsx'
+import ApiAlogolia from './Components/19.3 Alogolia/Alogolia.jsx'
 
 function App() {
   return (
@@ -74,6 +77,11 @@ function App() {
       <Time />
       <hr />
       <Marking />
+      <hr />
+      <Simple_fetch />
+      <hr />
+      {/* <Countries /> */}
+      <ApiAlogolia />
       
     </div>
   );
